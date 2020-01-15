@@ -4,19 +4,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navs: [
-      { id: 1, name: "项目" },
-      { id: 2, name: "文件" },
-      { id: 3, name: "编辑" },
-      { id: 4, name: "工具" },
-    ]
+    imgData: [], //轮播图数据
+    indicatorDots: true, //是否显示面板指示点
+    vertical: false, //滑动方向是否为纵向
+    autoplay: true, //是否自动切换
+    interval: 2000, //自动切换时间间隔
+    duration: 500 //滑动动画时长
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata', //仅为示例，并非真实的接口地址
+      success:res=> {
+        this.setData({
+          imgData:res.data.message
+        })
+      }
+    })
   },
 
   /**

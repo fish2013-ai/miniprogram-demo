@@ -4,6 +4,15 @@
     <view class="searchInput">搜索</view>
   </view>
 </view>
-<view class="nav">
-  <view class="item" wx:key="id" wx:for="{{navs}}">{{item.name}}</view>
+<!-- 轮播图 -->
+<view class="swiper">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgData}}" wx:key="goos_id">
+      <swiper-item>
+        <view class="swiper-item">
+          <image style="width:100%; height: 340rpx;" src="{{item.image_src}}"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
