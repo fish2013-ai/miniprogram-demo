@@ -1,15 +1,11 @@
+// pages/carts/carts.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    navs: [
-      { id: 1, name: "项目" },
-      { id: 2, name: "文件" },
-      { id: 3, name: "编辑" },
-      { id: 4, name: "工具" },
-    ]
+
   },
 
   /**
