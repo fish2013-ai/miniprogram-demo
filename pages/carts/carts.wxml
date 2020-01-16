@@ -1,2 +1,6 @@
 <!--pages/carts/carts.wxml-->
-<text>pages/carts/carts.wxml</text>
+<!-- 循环 -->
+<view wx:for="{{arry}}" wx:key="id">
+{{item.id}}
+<view wx:for="{{item.name}}" wx:for-item="v" wx:key="index">{{v}}</view>
+</view>

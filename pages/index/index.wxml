@@ -1,18 +1,37 @@
 <!-- 搜索框 -->
-<view>
-  <view class="search">
-    <view class="searchInput">搜索</view>
-  </view>
-</view>
+<search-input title="{{'搜索'}}" />
 <!-- 轮播图 -->
 <view class="swiper">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgData}}" wx:key="goos_id">
       <swiper-item>
         <view class="swiper-item">
-          <image style="width:100%; height: 340rpx;" src="{{item.image_src}}"></image>
+          <navigator url="{{item.navigator_url}}">
+            <image style="width:100%; height: 340rpx;" src="{{item.image_src}}"></image>
+          </navigator>
         </view>
       </swiper-item>
     </block>
   </swiper>
+</view>
+<!-- 分类 -->
+<view class="fenlei">
+  <view wx:for="{{catitems}}" wx:key="index" class="fl-det">
+    <navigator>
+      <image src="{{item.image_src}}"></image>
+    </navigator>
+  </view>
+</view>
+<!-- 时尚女装 -->
+<view class="fashion" wx:for="{{floordata}}" wx:key="index">
+  <view class="fashion-title">
+    <image src="{{item.floor_title.image_src}}"></image>
+  </view>
+  <view class="product">
+    <view wx:for="{{item.product_list}}" wx:for-item="prolist" wx:key="index" class="product_list">
+      <navigator open-type="{{prolist.open_type}}" url="{{prolist.navigator_url}}">
+        <image src="{{prolist.image_src}}"></image>
+      </navigator>
+    </view>
+  </view>
 </view>
