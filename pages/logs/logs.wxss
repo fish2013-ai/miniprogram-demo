@@ -19,14 +19,20 @@ page {
   align-items: center;
   font-size: 28rpx;
 }
+.cats .category .category_menu .active {
+  color: #EA4350;
+  border-left: 2px solid #EA4350;
+}
 .cats .category .category_goods {
   flex: 1;
 }
 .cats .category_goods .goods_item .goods_title {
-  padding-top: 15rpx;
+  height: 80rpx;
   font-size: 26rpx;
   color: #575757;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cats .category_goods .goods_item .goodes_list {
   display: flex;
@@ -34,14 +40,13 @@ page {
 }
 .cats .category_goods .goods_item .goodes_list navigator {
   width: 33.33%;
-  padding: 10rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .cats .category_goods .goods_item .goodes_list navigator image {
-  width: 90%;
+  width: 50%;
 }
 .cats .category_goods .goods_item .goodes_list navigator .goods_name {
   font-size: 20rpx;

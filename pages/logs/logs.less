@@ -19,6 +19,10 @@ page {
                 align-items: center;
                 font-size: 28rpx;
             }
+            .active{
+                color:#EA4350;
+                border-left: 2px solid #EA4350;
+            }
         }
 
         .category_goods {
@@ -29,22 +33,23 @@ page {
     .category_goods {
         .goods_item{
             .goods_title{
-                padding-top: 15rpx;
+                height: 80rpx;
                 font-size: 26rpx;
-color: #575757;
-text-align: center;
+                color: #575757;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .goodes_list{
                 display: flex;
                 flex-wrap: wrap;
                 navigator{
                     width: 33.33%;
-                    padding: 10rpx;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    image{width: 90%;}
+                    image{width: 50%;}
                     .goods_name{
                         font-size: 20rpx;
                     }

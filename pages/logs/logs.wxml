@@ -6,7 +6,12 @@
   <view class="category">
     <!-- 左边分类菜单 -->
     <scroll-view scroll-y="true" class="category_menu">
-      <view class="menu_item" wx:for="{{categoriesData}}" wx:key="*this">{{item}}</view>
+      <view class="menu_item {{index===currentIndex?'active':''}}" 
+      wx:for="{{categoriesData}}" 
+      wx:key="*this"
+      bindtap="handleMenuTap"
+      data-index="{{index}}"
+      >{{item}}</view>
     </scroll-view>
     <!-- 右侧商品 -->
     <scroll-view scroll-y="true" class="category_goods">
