@@ -1,0 +1,56 @@
+page {
+    height: 100%;
+}
+
+.cats {
+    height: 100%;
+    .category {
+        display: flex;
+        height: 1000rpx;
+
+        .category_menu {
+            width: 182rpx;
+            background-color: #f3f3f3;
+
+            .menu_item {
+                height: 74rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 28rpx;
+            }
+        }
+
+        .category_goods {
+            flex: 1
+        }
+    }
+
+    .category_goods {
+        .goods_item{
+            .goods_title{
+                padding-top: 15rpx;
+                font-size: 26rpx;
+color: #575757;
+text-align: center;
+            }
+            .goodes_list{
+                display: flex;
+                flex-wrap: wrap;
+                navigator{
+                    width: 33.33%;
+                    padding: 10rpx;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    image{width: 90%;}
+                    .goods_name{
+                        font-size: 20rpx;
+                    }
+                }
+                
+            }
+        }
+    }
+}

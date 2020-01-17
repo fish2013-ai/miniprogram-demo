@@ -1,8 +1,48 @@
-.log-list {
+page {
+  height: 100%;
+}
+.cats {
+  height: 100%;
+}
+.cats .category {
+  display: flex;
+  height: 1000rpx;
+}
+.cats .category .category_menu {
+  width: 182rpx;
+  background-color: #f3f3f3;
+}
+.cats .category .category_menu .menu_item {
+  height: 74rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}
+.cats .category .category_goods {
+  flex: 1;
+}
+.cats .category_goods .goods_item .goods_title {
+  padding-top: 15rpx;
+  font-size: 26rpx;
+  color: #575757;
+  text-align: center;
+}
+.cats .category_goods .goods_item .goodes_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cats .category_goods .goods_item .goodes_list navigator {
+  width: 33.33%;
+  padding: 10rpx;
   display: flex;
   flex-direction: column;
-  padding: 40rpx;
+  justify-content: center;
+  align-items: center;
 }
-.log-item {
-  margin: 10rpx;
+.cats .category_goods .goods_item .goodes_list navigator image {
+  width: 90%;
+}
+.cats .category_goods .goods_item .goodes_list navigator .goods_name {
+  font-size: 20rpx;
 }
