@@ -46,7 +46,9 @@ page {
   align-items: center;
 }
 .cats .category_goods .goods_item .goodes_list navigator image {
-  width: 50%;
+  width: 120rpx;
+  height: 120rpx
+                        ;
 }
 .cats .category_goods .goods_item .goodes_list navigator .goods_name {
   font-size: 20rpx;

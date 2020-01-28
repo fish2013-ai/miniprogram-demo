@@ -14,7 +14,8 @@
       >{{item}}</view>
     </scroll-view>
     <!-- 右侧商品 -->
-    <scroll-view scroll-y="true" class="category_goods">
+    <!--  scroll-top设置右边商品数据滚动条初始位置 -->
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" class="category_goods">
       <view class="goods_item" wx:for="{{goodsData}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1">
         <view class="goods_title">
           <text>/</text>

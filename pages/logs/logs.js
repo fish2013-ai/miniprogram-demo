@@ -8,7 +8,8 @@ Page({
     categoriesData: [], // 左边列表数据
     goodsData: [], // 右边商品数据
     currentIndex: 0,
-    goodsIndex: 0
+    goodsIndex: 0,
+    scrollTop: 0  // 右边商品数据滚动条初始位置
   },
   cates: [], // 接口返回数据
   // 将获取数据封装为函数
@@ -37,13 +38,15 @@ Page({
     const index = e.currentTarget.dataset.index
     this.setData({
       currentIndex: index,
-      goodsIndex: index
+      goodsIndex: index,
+      scrolltTop: 0      // 右边商品数据滚动条初始位置为0
     })
     //  右边商品数据
     let goodsData = this.cates[this.data.goodsIndex].children
     this.setData({
       goodsData
     })
+
   },
 
   /**
